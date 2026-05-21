@@ -9,13 +9,6 @@ if (!contactsDiv) {
     throw Error("No div with id 'contacts'");
 }
 
-function deleteContact(e){
-    const button = e.target;
-    button.removeEventListener('click', deleteContact);
-    const currentCard = e.target.closest(".carte");
-    contactsDiv.removeChild(currentCard);
-}
-
 submitButton.addEventListener(`click`, function (e) {
     e.preventDefault();
     const data = GetFormData();
@@ -25,7 +18,7 @@ submitButton.addEventListener(`click`, function (e) {
     const cartes = document.querySelectorAll(".carte");
 
     let found = false;
-    cartes.values().forEach(carte => found = !found ? Compare(carte, data) : true);
+    cartes.values().forEach(carte => found ||= Compare(carte, data));
 
     if (found) {
         alert("Le contact existe déjà!");
@@ -35,6 +28,12 @@ submitButton.addEventListener(`click`, function (e) {
     AddCard(contactsDiv, data);
 });
 
+function deleteContact(e){
+    const button = e.target;
+    button.removeEventListener('click', deleteContact);
+    const currentCard = e.target.closest(".carte");
+    contactsDiv.removeChild(currentCard);
+}
 
 function AddCard(contacts, data) {
     const carte = document.createElement("div");
