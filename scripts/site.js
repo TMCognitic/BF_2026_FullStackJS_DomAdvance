@@ -1,5 +1,3 @@
-console.log(`Script loaded : ${pi12}`);
-
 const submitButton = document.getElementById("submit");
 const contactsDiv = document.getElementById("contacts");
 
