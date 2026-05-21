@@ -1,0 +1,62 @@
+/* site.css */
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+
+
+.container{
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: start;
+}
+
+label{
+    text-align: right;
+    flex: 1;
+}
+
+input{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    flex: 1;
+}
+
+#submit
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+    flex-grow: 2;
+}
+
+.carte {
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.nom{
+    text-transform: uppercase;
+}
+
+.prenom{
+    text-transform: capitalize;
+    margin-left: 5px;
+}
+
+.email{
+    text-transform: lowercase;
+}
+
+.tel{
+    color: black;
+}
+
+button{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
